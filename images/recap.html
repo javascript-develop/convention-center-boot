@@ -6,13 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Convention center</title>
     <!-- fontawsome -->
+    <style>
+        .card {
+            border: none;
+            padding: 10px 5px;
+        }
+    
+        .card::after {
+            position: absolute;
+            z-index: -1;
+            opacity: 0;
+            -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+            transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+    
+        .card:hover {
+    
+    
+            transform: scale(1.02, 1.02);
+            -webkit-transform: scale(1.02, 1.02);
+            backface-visibility: hidden;
+            will-change: transform;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, .75) !important;
+        }
+    
+        .card:hover::after {
+            opacity: 1;
+        }
+    
+        .card:hover .btn-outline-primary {
+            color: white;
+            background: #007bff;
+        }
+    </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body>
         <!-- slide show -->
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="active">
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
                     aria-current="true" aria-label="Slide 1"></button>
@@ -64,11 +97,11 @@
         </div>
         <!-- slide end -->
         <!-- body start -->
-        <section class="conatiner d-flex pt-5 ps-5">
-            <div class="w-50">
+        <section class="conatiner col-12 d-flex pt-5 ps-5">
+            <div class="row col-5">
                 <img class="img-fluid mt-2 ms-3" src="wedding.png" alt="">
             </div>
-            <div class="w-50 mt-5 ms-5">
+            <div class="w-50 ps-5 mt-5">
                 <h2 class="text-black"> <b> Every Moment is precious</b></h2>
                 <p>he new Hyundai VENUE will provide customers Enhanced Connectivity and enable them to control vehicle
                     functions right
@@ -78,9 +111,295 @@
             </div>
             </div>
         </section>
+           <!-- package start -->
         <section>
-            <h1 class="text-center my-5">Our package</h1>
+                <div>
+                    <h1 class="text-center my-5">Our packageh <h1></h1>
+                </div>
+                <div class="container-fluid" style="background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);">
+                    <div class="container p-5">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-12 mb-4">
+                                <div class="card h-100 shadow-lg">
+                                    <div class="card-body">
+                                        <div class="text-center p-3">
+                                            <h5 class="card-title">Basic</h5>
+                                            <small>Individual</small>
+                                            <br><br>
+                                            <span class="h2">$8</span>/month
+                                            <br><br>
+                                        </div>
+                                        <p class="card-text">Plase buy this package and Enjoy profit.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> 100% profit grantee</li>
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> Daily ads view</li>
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> Enjoy the profit</li>
+                                    </ul>
+                                    <div class="card-body text-center">
+                                        <button class="btn px-5 py-1 btn-outline-primary btn-lg"
+                                            style="border-radius:30px">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-12 mb-4">
+                                <div class="card h-100 shadow-lg">
+                                    <div class="card-body">
+                                        <div class="text-center p-3">
+                                            <h5 class="card-title">Standard</h5>
+                                            <small>Small Business</small>
+                                            <br><br>
+                                            <span class="h2">$20</span>/month
+                                            <br><br>
+                                        </div>
+                                        <p class="card-text">Plase buy this package and Enjoy profit.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> 100%</li>
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> Daily ads view</li>
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> Enjoy the profit</li>
+                                    </ul>
+                                    <div class="card-body text-center">
+                                        <button class="btn px-5 py-1 btn-outline-primary btn-lg"
+                                            style="border-radius:30px">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-12 mb-4">
+                                <div class="card h-100 shadow-lg">
+                                    <div class="card-body">
+                                        <div class="text-center p-3">
+                                            <h5 class="card-title">Premium</h5>
+                                            <small>Large Companies</small>
+                                            <br><br>
+                                            <span class="h2">$200</span>/month
+                                            <br><br>
+                                        </div>
+                                        <p class="card-text">Plase buy this package and Enjoy profit.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> 100% profit grantee</li>
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> Daily ads view</li>
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> Enjoy the view</li>
+                                    </ul>
+                                    <div class="card-body text-center">
+                                        <button class="btn px-5 py-1 btn-outline-primary btn-lg"
+                                            style="border-radius:30px">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-12 mb-4">
+                                <div class="card h-100 shadow-lg">
+                                    <div class="card-body">
+                                        <div class="text-center p-3">
+                                            <h5 class="card-title">Pro Premium</h5>
+                                            <small>Large Companies</small>
+                                            <br><br>
+                                            <span class="h2">$400</span>/month
+                                            <br><br>
+                                        </div>
+                                        <p class="card-text">Plase buy this package and Enjoy profit.</p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> 100% profit grantee</li>
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> Daily ads view</li>
+                                        <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+                                            </svg> Enjoy this package</li>
+                                    </ul>
+                                    <div class="card-body text-center">
+                                        <button class="btn px-5 py-1 btn-outline-primary btn-lg"
+                                            style="border-radius:30px">Select</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
         </section>
+                <!-- package end -->
+                <!-- happy clients -->
+                <section>
+                    <h1 class="h1 text-black py-5 text-center">Happy Clients Says</h1>
+                    <div class="row px-5 mb-5">
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <img class="ms-5 ps-4"src="person 1.png" alt="">
+                                    <p class="text-center mt-2"> <span class="text-black"> <b>Cret yeter</b> </span> <br>banker </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <img class="ms-5 ps-4"src="person 2.png" alt="">
+                                    <p class="text-center mt-2"> <span class="text-black"> <b>Regina miles</b> </span> <br>banker </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <img class="ms-5 ps-4" src="person 3.png" alt="">
+                                    <p class="text-center mt-2"> <span class="text-black"> <b>Jone drake</b> </span> <br>banker </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+               <!-- happy clients end -->
+               <!-- faq start -->
+          <section class="container">
+                <h1 class="text-center my-5 py-3">Fequently Asked Question</h1>
+            <div class="row">
+               <div class=" ms-3 col-6">
+               <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            Programmer-rubel
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the first item's programming.</strong> "I Love Challenges".
+                            I belive In fact,
+                            I cannot spend a day without doing something new and challenging.<code>.Customize</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+                            aria-expanded="false" aria-controls="collapseTwo">
+                            Programmer-rubel
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the second item's programming.</strong>"I Love Challenges".
+                            I beleve there is No Limit to Learning and solving problems.
+                            I feel happy when I help someone in achieving his goal/business. In fact,
+                            I cannot spend a day without doing something new and challenging. <code>.Customize</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Programmer-rubel
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <strong>This is the third item' programming.</strong> "I Love Challenges".
+                            I beleve there is No Limit to Learning and solving problems.
+                            I feel happy when I help someone in achieving his goal/business. In fact,
+                            I cannot spend a day without doing something new and challenging.<code>.customize</code>, though the transition does limit overflow.
+                        </div>
+                    </div>
+                </div>
+               </div>
+               </div>
+               <div class="col-5 my-5">
+                <img class="img-fluid" src="people.png" alt="">
+               </div>
+            </div>
+        </section>
+        <!-- footer start -->
+            <footer class="text-center text-lg-start text-white" style="background-color: #929fba">
+                <!-- Grid container -->
+                <div class="container p-4 pb-0">
+                    <!-- Section: Links -->
+                    <section class="">
+                        <!--Grid row-->
+                        <div class="row">
+                            <!-- Grid column -->
+                            <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                                <h6 class="text-uppercase mb-4 font-weight-bold">
+                                    Company name
+                                </h6>
+                                <p>
+                                    Here you can use rows and columns to organize your footer
+                                    content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                    elit.
+                                </p>
+                            </div>
+                            <!-- Grid column -->
+            
+                            <hr class="w-100 clearfix d-md-none" />
+            
+                            <!-- Grid column -->
+                            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                                <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
+                                <p>
+                                    <a class="text-white">MDBootstrap</a>
+                                </p>
+                                <p>
+                                    <a class="text-white">MDWordPress</a>
+                                </p>
+                                <p>
+                                    <a class="text-white">BrandFlow</a>
+                                </p>
+                                <p>
+                                    <a class="text-decoration-none text-info" href="https://www.amazon.com/">amazon</a>
+                                </p>
+                            </div>
+        </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
